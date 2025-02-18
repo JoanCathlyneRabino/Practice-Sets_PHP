@@ -1,0 +1,207 @@
+<?
+// Question 1: What is the output of print_r($person);?
+print_r('Hello');
+print_r([1,2,3]);
+
+class Person{
+    public $name;
+    public $age;
+}
+
+$person = new Person();
+$person->name = "Alice";
+$person->age =25;
+
+/*
+Answer:
+Person Object
+(
+    [name] => Alice
+    [age] => 25
+)
+*/
+
+// Question 2: What is the output of var_dump($person);?
+
+var_dump('Hello');
+var_dump([1,2,3]);
+var_dump($person);
+/*
+Answer:
+object(Person)#1 (2) {
+  ["name"]=>
+  string(5) "Alice"
+  ["age"]=>
+  int(25)
+}
+*/
+
+
+// What is the output of var_dump($cashOnHand);?
+
+$name = 'Brad';
+$age = 40;
+$hasKids = true;
+$cashOnHand = 10.5;
+var_dump($cashOnHand);
+
+/*
+Answer: float(10.5)
+*/
+
+
+// What character is used to concatonate strings?
+
+echo "$name is $age years old";
+echo "${name} is ${age} years old";
+echo '<h3>'.$name .'is '.$age. 'yeaars old</h3>';
+
+
+/*
+Answer: '.'
+*/
+
+// Question 5: What is the output of echo HOST;?
+
+define('HOST', 'localhost');
+echo HOST;
+
+/*
+Answer: 'localhost'
+*/
+
+// How will you define in PHP the variable PI with the value 3.1416?
+define ('PI',3.1416);
+echo PI;
+
+
+
+// Question 7: What is the output of echo $numbers[3] + $numbers[7]?
+$numbers = [1,2,3,4,5];
+$numbers[3] + $numbers[7];
+
+/*
+Answer: 9
+*/
+// Question 8: What is the output of echo $colors [3]?
+$colors = ["red","green","blue"];
+echo $colors [3];
+
+/*
+Answer: none
+*/
+//9.What are the keys in the $person array?
+$person = [
+    "first_name" => "John",
+    "last_name" => "Doe",
+    "age" => 30
+];
+/*
+Answer: "first_name", "last_name", and "age"
+*/
+
+//10.How do you change "green" to "white" in the $colors array?
+$colors = [
+    1 => 'red',
+    2 => 'green',
+    3 => 'blue',
+];
+
+$colors[2] = 'white';
+var_dump ($colors);
+
+/*
+Answer: 
+    array(3) {
+    [1]=>
+    string(3) "red"
+    [2]=>
+    string(5) "white"
+    [3]=>
+    string(4) "blue"
+    }
+*/
+
+//11.What is the output of echo $hex['red'];?
+$hex = [
+    'red' => '#f00',
+    'green' => '#0f0',
+    'blue' => '#00f',
+];
+
+echo $hex['red']; 
+/*
+Answer: #f00
+*/
+
+//Question 12: What is the output echo $matrix[1][2];
+$matrix = [
+    [1,2,3],
+    [4,5,6],
+    [7,8,9]
+
+];
+echo $matrix[1][2];
+
+/*
+Answer: 6
+*/
+
+
+//Question 13: What is the output of echo $people[0]['first_name'];
+$person1 = [
+    'first_name' => 'Maeve',
+    'last_name' => 'Reid',
+    'email' => 'reid@gmail.com',
+];
+/*Answer: Maeve*/
+$people = [
+    $person1, // Equivalent to adding $person1
+    [
+        'first_name' => 'John',
+        'last_name' => 'Doe',
+        'email' => 'john@gmail.com',
+    ],
+    [
+        'first_name' => 'Jane',
+        'last_name' => 'Doe',
+        'email' => 'jane@gmail.com',
+    ],
+];
+
+echo $people[0]['first_name']; 
+
+/*Answer: Maeve*/
+
+//Question 14: What is the output of echo $people[2]['email'];
+/*Answer: jane@gmail.com*/
+
+
+
+
+//Question 15: What is the output of var_dump($chunkedArray);
+$fruits = ['dragon fruit','grapes','pineapple'];
+$chunkedArray = array_chunk($fruits, 2);
+var_dump($chunkedArray);
+
+/*Answer: 
+    array(2) {
+    [0]=>
+    array(2) {
+        [0]=>
+        string(12) "dragon fruit"
+        [1]=>
+        string(6) "grapes"
+    }
+    [1]=>
+    array(1) {
+        [0]=>
+        string(9) "pineapple"
+    }
+    }
+*/
+?>
+
+
+
+
